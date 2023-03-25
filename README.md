@@ -3,7 +3,7 @@
 
 ### `git init`
 
-Syntax: `git init <repository name>`
+Syntax: `git init [repository name]`
 
 initialize an existing directory as a Git repository
    
