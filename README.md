@@ -5,118 +5,130 @@
 
 Syntax: `git init <repository name>`
 
-This command is used to create a new Git repository.
+initialize an existing directory as a Git repository
    
 ### `git add` 
 
-Syntax: `git add <file>`
+Syntax: `git add [file]`
 
-This command is used to add changes to the staging area.
+add a file as it looks now to your next commit (stage)
 
 ### `git commit` 
 
-Syntax: `git commit -m "commit message"`
+Syntax: `git commit -m “[descriptive message]”`
 
-This command is used to commit changes to the repository.
+commit your staged content as a new commit snapshot
 
 ### `git status` 
   
 Syntax: `git status`
 
-This command is used to check the status of the repository.
+show modified files in working directory, staged for your next commit
 
 ### `git log` 
 
-Syntax: `git log`
+Syntax: `git log `
 
-This command is used to display the commit history.
+show all commits in the current branch’s history
 
 ### `git branch` 
 
-Syntax: `git branch <branch-name>`
+Syntax: `git branch [branch-name]`
 
-This command is used to manage branches in the repository.
+create a new branch at the current commit
 
 ### `git checkout`   
 
-Syntax: `git checkout <branch-name>`
+Syntax: `git checkout [branch-name]`
 
-This command is used to switch between branches or create a new branch.
+switch to another branch and check it out into your working directory
 
 ### `git merge` 
 
-Syntax: `git merge <branch-name>`
+Syntax: `git merge [branch-name]`
 
-This command is used to merge changes from one branch to another.
+merge the specified branch’s history into the current one
 
 ### `git pull` 
 
 Syntax: `git pull <remote> <branch>`
 
-This command is used to fetch and merge changes from a remote repository.
+fetch and merge any commits from the tracking remote branch
 
 ### `git push`
   
-Syntax: `git push <remote> <branch>`
+Syntax: `git push [alias] [branch]`
 
-This command is used to push changes to a remote repository.
+Transmit local branch commits to the remote repository branch
 
 ### `git mv`
 
-Syntax: `git mv`
+Syntax: `git mv [existing-path] [new-path]`
 
-Renames a file in the repository.
+change an existing file path and stage the move
 
 ### `git clone`
    
-Syntax: `git clone <repository-url>`
+Syntax: `git clone [url]`
 
-Clones a remote repository to your local machine.
+retrieve an entire repository from a hosted location via URL
 
 ### `git remote`
     
-Syntax: `git remote/git remote add <remote-name> <repository-url>`
+Syntax: `git remote add [alias] [url]`
     
-Lists or adds remote repositories.
+add a git URL as an alias
 
 ### `git fetch`
 
-Syntax: `git fetch <remote-name> <branch-name>`
+Syntax: `git fetch [alias]`
     
-Fetches changes from a remote repository without merging them into the current branch.
+fetch down all the branches from that Git remote
 
 ### `git diff`
     
 Syntax: `git diff`
 
-Shows differences between the working directory and the repository.
+diff of what is changed but not staged
 
 ### `git tag`
 
 Syntax: `git tag/git tag <tag-name>`
     
-Lists or creates tags.
+Lists or creates tags
     
 ### `git stash`
     
 Syntax: `git stash`
 
-Temporarily saves changes that are not ready to be committed.
+Save modified and staged changes
 
 ### `git reset`
     
-Syntax: `git reset <commit>`
+Syntax: `git reset [file]`
     
-Resets the repository to a previous commit.
+unstage a file while retaining the changes in working directory
 
 ### `git revert`
 
 Syntax: `git revert <commit>`
 
-Reverts changes made in a previous commit.
+reverts changes made in a previous commit
 
 ### `git rm`
     
-Syntax: `git rm <file>`
+Syntax: `git rm [file]`
     
-Removes files from the repository.
+delete the file from project and stage the removal for commit
+
+### `git log`
+    
+Syntax: `git log branchB..branchA`
+    
+show the commits on branchA that are not on branchB
+
+### `git log`
+    
+Syntax: `git log --follow [file]`
+    
+show the commits that changed file, even across renames
